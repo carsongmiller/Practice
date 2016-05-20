@@ -121,6 +121,44 @@ void Galaxy::update(double otherX, double otherY, double otherZ, double otherMas
 
 
 
+void Galaxy::updateSelf()
+{
+	xPos += xSpeed;
+	yPos += ySpeed;
+	zPos += zSpeed;
+
+	if (USE_3D)
+	{
+		xDisplay_L = xPos - LEYE_X;
+		yDisplay_L = yPos - LEYE_Y;
+		zDisplay_L = zPos - LEYE_Z;
+		xDisplay_R = xPos - REYE_X;
+		yDisplay_R = yPos - REYE_Y;
+		zDisplay_R = zPos - REYE_Z;
+
+		double lt = PLANE_Z / zDisplay_L; //works for display plane parallel to xy-plane
+		double rt = PLANE_Z / zDisplay_R; //works for display plane parallel to xy-plane
+
+		xDisplay_L *= lt;
+		yDisplay_L *= lt;
+		zDisplay_L *= lt;
+		xDisplay_R *= rt;
+		yDisplay_R *= rt;
+		zDisplay_R *= rt;
+	}
+
+	if (G_TRAILS && !USE_3D)
+	{
+		xOld[buffPlace] = xPos;
+		yOld[buffPlace] = yPos;
+		zOld[buffPlace] = zPos;
+		if (buffPlace < G_TRAIL_LENGTH - 1) buffPlace++;
+		else buffPlace = 0;
+	}
+}
+
+
+
 void Galaxy::display(HDC hdc, HWND hWnd)
 {
 	if(zPos < Z_RENDER_BOUNDARY)

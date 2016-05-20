@@ -1,10 +1,32 @@
-﻿Build started 11/20/2015 12:40:10 PM.
+﻿Build started 5/19/2016 8:50:32 PM.
      1>Project "C:\Users\Carson\Documents\Carson\School\EE 1301\Practice\Orbit\Orbit.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Orbit.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Orbit.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Orbit.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Orbit.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Orbit.cpp galaxy.cpp star.cpp universe.cpp
+         universe.cpp
+         star.cpp
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\star.cpp(226): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\star.cpp(233): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\star.cpp(246): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\star.cpp(251): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\star.cpp(260): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\star.cpp(261): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\star.cpp(262): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\star.cpp(263): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+         galaxy.cpp
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\galaxy.cpp(192): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\galaxy.cpp(199): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\galaxy.cpp(213): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\galaxy.cpp(218): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\galaxy.cpp(228): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\galaxy.cpp(229): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\galaxy.cpp(230): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+     1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\galaxy.cpp(231): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
          Orbit.cpp
      1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\orbit.cpp(35): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
      1>c:\users\carson\documents\carson\school\ee 1301\practice\orbit\orbit.cpp(192): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
+         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Carson\Documents\Carson\School\EE 1301\Practice\Debug\Orbit.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Carson\Documents\Carson\School\EE 1301\Practice\Debug\Orbit.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Carson\Documents\Carson\School\EE 1301\Practice\Debug\Orbit.lib" /MACHINE:X86 Debug\Orbit.res
          Debug\galaxy.obj
@@ -17,4 +39,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.62
+Time Elapsed 00:00:03.72

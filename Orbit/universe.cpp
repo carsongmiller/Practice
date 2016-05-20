@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "universe.h"
 #include "galaxy.h"
-#include "star.h"
+#include "star.h" 
 
 Universe::Universe()
 {
@@ -125,6 +125,12 @@ void Universe::update()
 				}
 			}
 		}
+	}
+
+	if (!GAL_GAL_INTER && !STAR_GAL_INTER)
+	{
+		for (int i = 0; i < NUM_GALAXY; i++)
+			galaxy[i].updateSelf();
 	}
 
 	//set all "last" values to the new position values

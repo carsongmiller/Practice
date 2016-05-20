@@ -15,7 +15,8 @@ private:
 	double xDisplay_L, yDisplay_L, zDisplay_L; //coordinates for 3d display (left eye)
 	double xDisplay_R, yDisplay_R, zDisplay_R; //coordinates for 3d display (right eye)
 	double mass;
-	double xOld[S_TRAIL_LENGTH], yOld[S_TRAIL_LENGTH], zOld[S_TRAIL_LENGTH];
+	//double xOld[S_TRAIL_LENGTH], yOld[S_TRAIL_LENGTH], zOld[S_TRAIL_LENGTH];
+	double *xOld, *yOld, *zOld;
 	int buffPlace;
 	int planeZ;
 	HBRUSH brush;

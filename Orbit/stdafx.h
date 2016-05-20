@@ -15,13 +15,13 @@ Display Variables
 
 #define TIME_INT			.0001			//time interval over which to update object velocities
 #define G_TRAILS			false			//use galaxy trails
-#define S_TRAILS			true			//use star trails
-#define G_TRAIL_LENGTH		100				//length of galaxy trails
-#define S_TRAIL_LENGTH		10				//length of star trails
+#define S_TRAILS			false			//use star trails
+#define G_TRAIL_LENGTH		1000			//length of galaxy trails
+#define S_TRAIL_LENGTH		1000			//length of star trails
 #define GALAXY_SIZE			20				//radius of galaxy center
 #define STAR_SIZE			5				//radius of stars
 #define S_GROWTH_FACTOR		1.006			//scaling of z coordinate to star radius
-#define USE_3D				true			//use 3D projection
+#define USE_3D				false			//use 3D projection
 #define HATCH_3D			true			//use cross hatching with 3D display
 #define USE_Z_SCALING		true			//whether to change radius of star based on z-position
 #define	SPEED				15				//how long to wait between updates of display
@@ -35,7 +35,7 @@ Initialization Variables
 */
 
 #define NUM_GALAXY			1				//number of galaxies per star
-#define NUM_STAR			50				//number of stars per galaxy
+#define NUM_STAR			500			//number of stars per galaxy
 #define GALAXY_MASS			10000000		//mass of galaxy center
 #define STAR_MASS			50				//mass of star (larger -> more distant orbit b/c more inertia)
 #define G_C					2				//gravitational constant (not working currently)
@@ -78,8 +78,8 @@ Galaxy Initial Positions
 */
 
 //Galaxy 1:
-#define G1_XPOS				0
-#define G1_YPOS				0
+#define G1_XPOS				300
+#define G1_YPOS				400
 #define G1_ZPOS				0
 #define G1_XSPEED			0
 #define G1_YSPEED			0
@@ -87,7 +87,7 @@ Galaxy Initial Positions
 
 //Galaxy 2:
 #define G2_XPOS				1000
-#define G2_YPOS				200
+#define G2_YPOS				400
 #define G2_ZPOS				0
 #define G2_XSPEED			0
 #define G2_YSPEED			0

@@ -30,6 +30,7 @@ public:
 			double mass
 			);
 	void update(double otherX, double otherY, double otherZ, double otherMass);
+	void updateSelf();
 	void updateLast()
 	{
 		xLast = xPos;

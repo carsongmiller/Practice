@@ -14,14 +14,27 @@ Star::Star()
 	zSpeed = ((double)rand() / RAND_MAX) + 1;
 	mass = ((double)rand() / RAND_MAX) + 1;
 	planeZ = PLANE_Z;
-
-	for (int i = 0; i < S_TRAIL_LENGTH; i++)
+	if (S_TRAILS)
 	{
-		xOld[i] = xPos + STAR_SIZE / 2;
-		yOld[i] = yPos + STAR_SIZE / 2;
-		xOld[i] = xPos + STAR_SIZE / 2;
+		xOld = new double[S_TRAIL_LENGTH];
+		yOld = new double[S_TRAIL_LENGTH];
+		zOld = new double[S_TRAIL_LENGTH];
+
+		for (int i = 0; i < S_TRAIL_LENGTH; i++)
+		{
+			xOld[i] = xPos;
+			yOld[i] = yPos;
+			zOld[i] = zPos;
+		}
+
+		for (int i = 0; i < S_TRAIL_LENGTH; i++)
+		{
+			xOld[i] = xPos + STAR_SIZE / 2;
+			yOld[i] = yPos + STAR_SIZE / 2;
+			xOld[i] = xPos + STAR_SIZE / 2;
+		}
+		buffPlace = 0;
 	}
-	buffPlace = 0;
 	updateLast();
 }
 
@@ -48,11 +61,26 @@ Star::Star(
 	this->brush = brush;
 	this->planeZ = PLANE_Z;
 
-	for (int i = 0; i < S_TRAIL_LENGTH; i++)
+	if (S_TRAILS)
 	{
-		xOld[i] = xPos + STAR_SIZE / 2;
-		yOld[i] = yPos + STAR_SIZE / 2;
-		xOld[i] = xPos + STAR_SIZE / 2;
+		xOld = new double[S_TRAIL_LENGTH];
+		yOld = new double[S_TRAIL_LENGTH];
+		zOld = new double[S_TRAIL_LENGTH];
+
+		for (int i = 0; i < S_TRAIL_LENGTH; i++)
+		{
+			xOld[i] = xPos;
+			yOld[i] = yPos;
+			zOld[i] = zPos;
+
+		}
+
+		for (int i = 0; i < S_TRAIL_LENGTH; i++)
+		{
+			xOld[i] = xPos + STAR_SIZE / 2;
+			yOld[i] = yPos + STAR_SIZE / 2;
+			xOld[i] = xPos + STAR_SIZE / 2;
+		}
 	}
 	buffPlace = 0;
 	updateLast();
@@ -100,6 +128,9 @@ Star::Star(
 	this->brush = brush;
 	if (S_TRAILS)
 	{
+		xOld = new double[S_TRAIL_LENGTH];
+		yOld = new double[S_TRAIL_LENGTH];
+		zOld = new double[S_TRAIL_LENGTH];
 		for (int i = 0; i < S_TRAIL_LENGTH; i++)
 		{
 			xOld[i] = xPos;

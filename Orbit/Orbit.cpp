@@ -190,6 +190,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			univ->display(hdcBuffer, hWnd); //write universe display to hbmBuffer
 		BitBlt(hdc, 0, 0, rect->right, rect->bottom, hdcBuffer, 0, 0, SRCCOPY); //display hdbBuffer on screen
 		Sleep(*speed);
+		DeleteObject(hbmBuffer);
+		DeleteObject(hbmOldBuffer);
 
 		InvalidateRect(hWnd, rect, TRUE);
 		EndPaint(hWnd, &ps);
